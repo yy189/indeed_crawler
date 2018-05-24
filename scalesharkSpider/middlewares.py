@@ -22,7 +22,7 @@ class CustomHttpProxyMiddleware(object):
         p = random.choice(PROXIES)
         try:
             request.meta['proxy'] = p['prtcl_ip_port']
-            request.meta['proxy'] = 'https://129.213.76.9:3128'
+            # request.meta['proxy'] = 'https://129.213.76.9:3128'
             print(request.meta['proxy'])
         except Exception, e:
             log.msg("Exception %s" % e, _level=log.CRITICAL)

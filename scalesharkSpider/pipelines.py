@@ -9,21 +9,27 @@ import json
 
 class ScalesharkspiderPipeline(object):
     def __init__(self):
-        self.f = open('startups.csv', 'wb')
-        self.csvwriter = csv.writer(self.f, delimiter=',')
-        self.csvwriter.writerow(['organization_name', 'categories', 'headquarters_location', 'description'])
+        self.file = open('startups.csv', 'w')
+        fieldnames = ['organization_name', 'categories', 'headquarters_location', 'description']
+        self.writer = csv.DictWriter(self.file, fieldnames=fieldnames)
+        self.writer.writeheader()
+        # self.csvwriter = csv.writer(self.file)
+        # self.csvwriter.writerow(['organization_name', 'categories', 'headquarters_location', 'description'])
 
     def process_item(self, item, spider):
-        rows = zip(item['organizationName'], item['categories'], item['headquartersLocation'], item['description'])
-        print(rows[0])
+        self.writer.writerow({'organization_name': item['organizationName'],
+                              'categories': item['categories'],
+                              'headquarters_location': item['headquartersLocation'],
+                              'description': item['description']})
+        # print(item)
+        # row = zip(item['organizationName'], item['categories'], item['headquartersLocation'], item['description'])
         
-        for row in rows:
-            self.csvwriter.writerow(row)
+        # self.csvwriter.writerow(",".join(item))
             
         return item
 
     def close_spider(self, spider):
-        self.f.close()
+        self.file.close()
     
     # def __init__(self):
     #     self.file = open('teacher.json', 'wb')

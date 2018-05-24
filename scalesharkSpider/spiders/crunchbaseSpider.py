@@ -14,5 +14,4 @@ class CrunchbaseSpider(scrapy.Spider):
             item['categories'] = ", ".join([x.strip() for x in each.xpath(".//grid-cell[@class='column-id-categories ng-star-inserted']//a[@class='cb-link ng-star-inserted']/text()").extract()])
             item['headquartersLocation'] = ", ".join([x.strip() for x in each.xpath(".//grid-cell[@class='column-id-location_identifiers ng-star-inserted']//a[@class='cb-link ng-star-inserted']/text()").extract()])
             item['description'] = each.xpath(".//grid-cell[@class='column-id-short_description ng-star-inserted']//span[@class='component--field-formatter field-type-text_long ng-star-inserted']/text()").extract()[0].strip()
-            # print(item)
             yield item

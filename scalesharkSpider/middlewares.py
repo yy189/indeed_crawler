@@ -23,7 +23,7 @@ class CustomHttpProxyMiddleware(object):
         try:
             request.meta['proxy'] = p['prtcl_ip_port']
             # request.meta['proxy'] = 'https://129.213.76.9:3128'
-            print(request.meta['proxy'])
+            print("ip proxy: " + request.meta['proxy'])
         except Exception, e:
             log.msg("Exception %s" % e, _level=log.CRITICAL)
             
@@ -31,5 +31,5 @@ class CustomHttpProxyMiddleware(object):
 class CustomUserAgentMiddleware(object):
     def process_request(self, request, spider):
         agent = random.choice(AGENTS)
-        print("user-agent: " + agent)
+        print("User-Agent: " + agent)
         request.headers['User-Agent'] = agent

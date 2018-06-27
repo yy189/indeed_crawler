@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9da00701-5a16-43aa-a6d4-c8d8d932eb16" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/entrypoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/entrypoint.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search_terms.py" beforeDir="false" afterPath="$PROJECT_DIR$/search_terms.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,7 +34,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="entrypoint.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="entrypoint.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/entrypoint.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
@@ -47,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search_terms.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="search_terms.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/search_terms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1035">
-              <caret line="69" column="13" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="13" />
+            <state>
+              <caret column="13" selection-start-column="13" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -175,10 +174,10 @@
         <option value="$PROJECT_DIR$/scalesharkSpider/items.py" />
         <option value="$PROJECT_DIR$/scalesharkSpider/settings.py" />
         <option value="$PROJECT_DIR$/scalesharkSpider/pipelines.py" />
-        <option value="$PROJECT_DIR$/search_terms.py" />
         <option value="$PROJECT_DIR$/scalesharkSpider/spiders/indeedSpider.py" />
         <option value="$PROJECT_DIR$/urls.py" />
         <option value="$PROJECT_DIR$/entrypoint.py" />
+        <option value="$PROJECT_DIR$/search_terms.py" />
       </list>
     </option>
   </component>
@@ -380,10 +379,10 @@
     <frame x="18" y="29" width="1070" height="777" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25452814" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25452814" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5100095" side_tool="true" weight="0.35882354" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.48999047" visible="true" weight="0.35882354" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48999047" visible="true" weight="0.35882354" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.49952334" weight="0.32941177" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -702,13 +701,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/search_terms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="69" column="13" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scalesharkSpider/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -746,6 +738,13 @@
           <folding>
             <element signature="e#0#34#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search_terms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>

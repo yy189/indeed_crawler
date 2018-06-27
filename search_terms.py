@@ -1,16 +1,5 @@
 import urllib
 
-ny_series_a = ""
-ny_series_b = ""
-sf_series_a = ""
-sf_series_b = "https://www.indeed.com/jobs?q=software+%22series+b%22&l=San+Francisco%2C+CA&radius=100"
-boston_series_a = ""
-boston_series_b = ""
-dc_series_a = ""
-dc_series_b = ""
-miami_series_a = ""
-miami_series_b = ""
-
 base_url = "https://www.indeed.com/jobs"
 
 radius = "25"

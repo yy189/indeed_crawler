@@ -3,16 +3,19 @@
 # Define here the models for your scraped items
 #
 # See documentation in:
-# https://doc.scrapy.org/en/latest/topics/items.html
+# https://doc.org/en/latest/topics/items.html
 
-import scrapy
+from scrapy import Item, Field
+
+class ScalesharkspiderItem(Item):
+    job_title = Field()
+    company = Field()
+    summary = Field()
+    job_link = Field()
+    company_link = Field()
+    location = Field()
+    job_id = Field()
 
 
-class ScalesharkspiderItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    
-    organizationName = scrapy.Field()
-    categories = scrapy.Field()
-    headquartersLocation = scrapy.Field()
-    description = scrapy.Field()
+
+

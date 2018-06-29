@@ -15,6 +15,7 @@ class ScalesharkspiderItem(Item):
     company_link = Field()
     location = Field()
     job_id = Field()
+    experience_list = Field()
 
 
 

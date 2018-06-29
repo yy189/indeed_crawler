@@ -59,24 +59,23 @@ DOWNLOADER_MIDDLEWARES = {
    # 'scalesharkSpider.middlewares.CustomUserAgentMiddleware': 545,
    'scrapy.downloadermiddlewares.retry.RetryMiddleware': 351,
 }
+RETRY_ENABLED = True
 
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
-# EXTENSIONS = {
-#    'scalesharkSpider.extensions.RedisSpiderSmartIdleClosedExensions': 500,
+EXTENSIONS = {
    # 'scrapy.extensions.telnet.TelnetConsole': None,
-# }
+}
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    'scalesharkSpider.pipelines.ScalesharkspiderPipeline': 300,
-   # 111'scrapy_redis.pipelines.RedisPipeline':400,
+   # 'scrapy_redis.pipelines.RedisPipeline':400,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
-# 自动限速
 AUTOTHROTTLE_ENABLED = True
 # The initial download delay
 #AUTOTHROTTLE_START_DELAY = 5
@@ -96,25 +95,14 @@ AUTOTHROTTLE_ENABLED = True
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
-# 111SCHEDULER = "scrapy_redis.scheduler.Scheduler"
-# 111DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
-# 111SCHEDULER_PERSIST = True
+# SCHEDULER = "scrapy_redis.scheduler.Scheduler"
+# DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+# SCHEDULER_PERSIST = True
 # Priority
-# 111SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.SpiderPriorityQueue'
+# SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.SpiderPriorityQueue'
 # FIFO
 # SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.SpiderQueue'
 # LIFO
 # SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.SpiderStack'
 
-# REDIS_HOST = 'localhost'
-# REDIS_PORT = 6379
-
-# 111REDIS_URL = 'redis://@localhost:6379'
-
-# MYEXT_ENABLED=True      # 是否启用扩展，启用扩展为 True， 不启用为 False
-# IDLE_NUMBER=360           # 关闭爬虫的持续空闲次数，持续空闲次数超过IDLE_NUMBER，爬虫会被关闭。默认为 360 ，也就是30分钟，一分钟12个时间单位
-
-# MONGODB_HOST = "127.0.0.1"
-# MONGODB_PORT = 27017
-# MONGODB_DBNAME = "ScaleShark"
-# MONGODB_SHEETNAME = "Indeed"
+# REDIS_URL = 'redis://@localhost:6379'

@@ -11,3 +11,5 @@ LOCATION = "//span[@class='location']/text()"
 NEXTPAGE = "//span[@class='np' and contains(text(), 'Next')]/../../@href"
 
 JOBID = "//div[contains(@id, 'p_') or contains(@id, 'pj_')]/@id"
+
+JOB_DETAILS = "//span[@id='job_summary']"

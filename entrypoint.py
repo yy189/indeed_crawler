@@ -25,6 +25,7 @@ with open("middleware1.csv", "r") as f, open("middleware2.csv", "w") as out_file
 
 existing_companies = read_existing_companies("emails_searched_by_domain.csv")
 existing_companies |= read_existing_companies("SF_startups.csv")
+print(len(existing_companies))
 
 with open("middleware2.csv") as f:
     reader = csv.DictReader(f)
@@ -34,7 +35,7 @@ with open("middleware2.csv") as f:
         exists = True
 
     with open(out_path, "a+") as f1:
-        fieldnames = ['job_id', 'job_title', 'company', 'location', 'summary', 'job_link', 'company_link', 'desired_experience', 'fetched_by_hunterio?']
+        fieldnames = ['job_id', 'job_title', 'company', 'location', 'summary', 'job_link', 'company_link', 'desired_experience', 'contacts_fetched?']
         writer = csv.DictWriter(f1, fieldnames=fieldnames)
         if exists:
             os.system("echo '\n' >> " + out_path)
@@ -43,9 +44,9 @@ with open("middleware2.csv") as f:
 
         for row in reader:
             if row["company"] in existing_companies:
-                row["fetched_by_hunterio?"] = "Yes"
+                row["contacts_fetched?"] = "Yes"
             else:
-                row["fetched_by_hunterio?"] = "No"
+                row["contacts_fetched?"] = "No"
             writer.writerow(row)
 
 os.remove("middleware1.csv")

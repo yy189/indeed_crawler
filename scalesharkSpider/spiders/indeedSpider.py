@@ -4,14 +4,19 @@ from urls import URLS
 import re
 from scalesharkSpider.items import ScalesharkspiderItem
 import technologies
+from scalesharkSpider.settings import CATEGORY
+import constants
 # from scrapy_redis.spiders import RedisSpider
 
 base_url = 'https://www.indeed.com'
 
+# class IndeedSpider(RedisSpider):
 class IndeedSpider(scrapy.Spider):
     name = 'indeedSpider'
     allowed_domains = ['indeed.com']
     start_urls = []
+    TECHS_REGEX = []
+    TECHS_FOR_LOOP = []
     # redis_key = 'indeedSpider:start_urls'
 
     def __init__(self, *args, **kwargs):
@@ -20,7 +25,21 @@ class IndeedSpider(scrapy.Spider):
         super(IndeedSpider, self).__init__(*args, **kwargs)
 
         self.start_urls = URLS
-
+        if CATEGORY is constants.SOFTWARE_DEVELOPMENT:
+            self.TECHS_REGEX = technologies.SOFTWARE_DEVELOPMENT_TECHS_REGEX
+            self.TECHS_FOR_LOOP = technologies.SOFTWARE_DEVELOPMENT_TECHS_FORLOOP
+        elif CATEGORY is constants.ELECTRICAL_ENGINEERING:
+            self.TECHS_REGEX = technologies.ELECTRICAL_ENGINEERING_TECHS_REGEX
+            self.TECHS_FOR_LOOP = technologies.ELECTRICAL_ENGINEERING_TECHS_FORLOOP
+        elif CATEGORY is constants.IT_OPERATIONS:
+            self.TECHS_REGEX = technologies.IT_OPERATIONS_TECHS_REGEX
+            self.TECHS_FOR_LOOP = technologies.IT_OPERATIONS_TECHS_FORLOOP
+        elif CATEGORY is constants.INFORMATION_DESIGN_AND_DOCUMENTATION:
+            self.TECHS_REGEX = technologies.INFORMATION_DESIGN_AND_DOCUMENTATION_TECHS_REGEX
+            self.TECHS_FOR_LOOP = technologies.INFORMATION_DESIGN_AND_DOCUMENTATION_TECHS_FORLOOP
+        elif CATEGORY is constants.PROJECT_MANAGEMENT:
+            self.TECHS_REGEX = technologies.PROJECT_MANAGEMENT_TECHS_REGEX
+            self.TECHS_REGEX = technologies.PROJECT_MANAGEMENT_TECHS_FORLOOP
 
     def parse(self, response):
 
@@ -34,7 +53,7 @@ class IndeedSpider(scrapy.Spider):
         for idx, u in enumerate(zip(job_title_list, company_list, summary_list, job_link_list, location_list, id_list)):
             item = ScalesharkspiderItem()
             item['job_title'] = u[0]
-            item['company'] = re.sub('<[^<]+?>', '', u[1]).split()[-1]
+            item['company'] = re.sub('<[^<]+?>', '', u[1]).strip()
             item['summary'] = re.sub('<[^<]+?>', '', u[2]).strip()
             item['job_link'] = base_url + u[3]
             item['location'] = u[4]
@@ -64,8 +83,8 @@ class IndeedSpider(scrapy.Spider):
         if not len(job_details):
             return
         el_reg = re.findall('[a-z]?[A-Z\.][a-z0-9A-Z#+\.-]*', job_details[0])
-        el = list(set(technologies.TECHS_REGEX) & set(el_reg))
-        for tech in technologies.TECHS_FOR_LOOP:
+        el = list(set(self.TECHS_REGEX) & set(el_reg))
+        for tech in self.TECHS_FOR_LOOP:
             if tech in job_details[0]:
                 el.append(tech)
         item['experience_list'] = ", ".join(el)

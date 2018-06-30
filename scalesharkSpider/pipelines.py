@@ -9,7 +9,7 @@ import csv
 
 class ScalesharkspiderPipeline(object):
     def __init__(self):
-        self.file = open('startups.csv', 'w')
+        self.file = open('middleware1.csv', 'w')
         fieldnames = ['job_id', 'job_title', 'company', 'location', 'summary', 'job_link', 'company_link', 'desired_experience']
         self.writer = csv.DictWriter(self.file, fieldnames=fieldnames)
         self.writer.writeheader()

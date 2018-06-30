@@ -2,9 +2,9 @@ import urllib
 
 base_url = "https://www.indeed.com/jobs"
 
-radius = "25"
+radius = 25
 
-keywords = [" \"series a\"", " \"series b\""]
+keywords = ["series b", "series c"]
 
 software_development_job_titles = [
     "Software Engineer", "Front End Developer", "Developer", "Full Stack Developer",
@@ -48,16 +48,15 @@ def generate_urls(job_titles_list):
     with open("urls.py", "wb") as f:
         f.write("URLS = [\n")
         for l in locations:
-            l = urllib.quote_plus(l)
             for jt in job_titles_list:
                 if len(keywords):
                     for kw in keywords:
-                        q = urllib.quote_plus(jt + kw)
-                        full_url = base_url + "?q=" + q + "&l=" + l + "&radius=" + radius
+                        q = urllib.quote_plus(jt + " \"" + kw + "\"")
+                        full_url = base_url + "?q=" + q + "&l=" + l + "&radius=" + str(radius)
                         f.write("\t\t\t'" + full_url + "',\n")
                 else:
                     q = urllib.quote_plus(jt)
-                    full_url = base_url + "?q=" + q + "&l=" + l + "&radius=" + radius
+                    full_url = base_url + "?q=" + q + "&l=" + l + "&radius=" + str(radius)
                     f.write("\t\t\t'" + full_url + "',\n")
         f.write("]")
         print("URLs generated!")

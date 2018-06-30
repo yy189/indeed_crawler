@@ -1,0 +1,5 @@
+SOFTWARE_DEVELOPMENT = "Software Development"
+ELECTRICAL_ENGINEERING = "Electrical Engineering"
+IT_OPERATIONS = "IT Operations & Helpdesk"
+INFORMATION_DESIGN_AND_DOCUMENTATION = "Information Design & Documentation"
+PROJECT_MANAGEMENT = "Project Management"

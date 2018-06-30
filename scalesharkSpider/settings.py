@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import constants
 
 # Scrapy settings for scalesharkSpider project
 #
@@ -106,3 +107,12 @@ AUTOTHROTTLE_ENABLED = True
 # SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.SpiderStack'
 
 # REDIS_URL = 'redis://@localhost:6379'
+
+CATEGORY = constants.SOFTWARE_DEVELOPMENT
+# CATEGORY = constants.ELECTRICAL_ENGINEERING
+# CATEGORY = constants.IT_OPERATIONS
+# CATEGORY = constants.INFORMATION_DESIGN_AND_DOCUMENTATION
+# CATEGORY = constants.PROJECT_MANAGEMENT
+
+
+

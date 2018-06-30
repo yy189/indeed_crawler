@@ -1,4 +1,6 @@
-TECHS_REGEX = [
+#checked 200 job posts per category
+
+SOFTWARE_DEVELOPMENT_TECHS_REGEX = [
     "AWS", "Azure", "IaaS", "PaaS", "Java", "Python", "Django", "Linux", "R", "MATLAB", "SAS", "SQL", "C", "C++",
     "Javascript", "Node.js", "C#", "HTML", "RESTful", "QA", "Angular", "Scala", "Java8", "Elixir", "Node", "PHP",
     "Sybase", "PostgreSQL", "MySQL", "Agile", "AI", "ML", "Flask", "Falcon", "Redis", "Varnish", "ES6", "React.js",
@@ -16,7 +18,41 @@ TECHS_REGEX = [
     "Grafana", "Sentry", "ELK", "Selenium", "DOM", "PSR", "FDA", "GMP", "GLP", "GCP",
 ]
 
-TECHS_FOR_LOOP = [
+SOFTWARE_DEVELOPMENT_TECHS_FORLOOP = [
     "cloud", "relational databases", "Quality Assurance", "Pivotal Tracker", "Single Stop's", "Machine learning",
     "Angular JS", "Elastic Search", "Map Reduce", "relational database", "Rapid7 Nexpose", "front-end", "PL/SQL",
+]
+
+ELECTRICAL_ENGINEERING_TECHS_REGEX = [
+    ""
+]
+
+ELECTRICAL_ENGINEERING_TECHS_FORLOOP = [
+
+]
+
+IT_OPERATIONS_TECHS_REGEX = [
+    "Linux", "Docker", "Kubernetes", "Ansible", "Puppet", "Python", "Ruby", "SaaS", "Hadoop", "MongoDB", "Redis", "NoSQL",
+    "DevOps", "RGA", "PLC", "RF", "ITIL", "Okta",
+]
+
+IT_OPERATIONS_TECHS_FORLOOP = [
+    "kernel tuning", "shell scripting", "Google Cloud Platform", "Casper Suite",
+]
+
+INFORMATION_DESIGN_AND_DOCUMENTATION_TECHS_REGEX = [
+
+]
+
+INFORMATION_DESIGN_AND_DOCUMENTATION_TECHS_FORLOOP = [
+
+]
+
+
+PROJECT_MANAGEMENT_TECHS_REGEX = [
+
+]
+
+PROJECT_MANAGEMENT_TECHS_FORLOOP = [
+
 ]

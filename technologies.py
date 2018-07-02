@@ -1,5 +1,3 @@
-#checked 200 job posts per category
-
 SOFTWARE_DEVELOPMENT_TECHS_REGEX = [
     "AWS", "Azure", "IaaS", "PaaS", "Java", "Python", "Django", "Linux", "R", "MATLAB", "SAS", "SQL", "C", "C++",
     "Javascript", "Node.js", "C#", "HTML", "RESTful", "QA", "Angular", "Scala", "Java8", "Elixir", "Node", "PHP",
@@ -24,11 +22,11 @@ SOFTWARE_DEVELOPMENT_TECHS_FORLOOP = [
 ]
 
 ELECTRICAL_ENGINEERING_TECHS_REGEX = [
-    ""
+    "CAD", "DNS",
 ]
 
 ELECTRICAL_ENGINEERING_TECHS_FORLOOP = [
-
+    "TCP/IP", "LAN/WAN",
 ]
 
 IT_OPERATIONS_TECHS_REGEX = [
@@ -41,18 +39,18 @@ IT_OPERATIONS_TECHS_FORLOOP = [
 ]
 
 INFORMATION_DESIGN_AND_DOCUMENTATION_TECHS_REGEX = [
-
+    "Tableau", "postgreSQL", "SQL", "MSSQL", "MySQL", "AWS", "Excel", "Bloomberg"
 ]
 
 INFORMATION_DESIGN_AND_DOCUMENTATION_TECHS_FORLOOP = [
-
+    "data-visualization", "Thomson Reuters",
 ]
 
 
 PROJECT_MANAGEMENT_TECHS_REGEX = [
-
+    "BIM", "Revit", "Autocad", "Rhino", "Inventor", "Excel", "Logikal", "Dynamo", "Grasshopper", "Java", "SDLC",
 ]
 
 PROJECT_MANAGEMENT_TECHS_FORLOOP = [
-
+    "Autodesk 360", "Software Testing", "Cable MSO",
 ]

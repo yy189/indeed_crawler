@@ -2,9 +2,9 @@ import urllib
 
 base_url = "https://www.indeed.com/jobs"
 
-radius = 25
+radius = 100
 
-keywords = ["series b", "series c"]
+keywords = ["series a", "series b", "series c"]
 
 software_development_job_titles = [
     "Software Engineer", "Front End Developer", "Developer", "Full Stack Developer",

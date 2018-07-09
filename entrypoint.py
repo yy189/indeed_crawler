@@ -9,22 +9,21 @@ import constants
 
 out_path = "indeed_jobs.csv"
 
-if settings.CATEGORY is constants.SOFTWARE_DEVELOPMENT:
-    search_terms.generate_urls(search_terms.software_development_job_titles)
-elif settings.CATEGORY is constants.ELECTRICAL_ENGINEERING:
-    search_terms.generate_urls(search_terms.electrical_engineering_job_titles)
-elif settings.CATEGORY is constants.IT_OPERATIONS:
-    search_terms.generate_urls(search_terms.it_operaions_job_titles)
-elif settings.CATEGORY is constants.INFORMATION_DESIGN_AND_DOCUMENTATION:
-    search_terms.generate_urls(search_terms.project_management_job_titles)
-
-execute(['scrapy', 'crawl', 'indeedSpider'])
+# if settings.CATEGORY is constants.SOFTWARE_DEVELOPMENT:
+#     search_terms.generate_urls(search_terms.software_development_job_titles)
+# elif settings.CATEGORY is constants.ELECTRICAL_ENGINEERING:
+#     search_terms.generate_urls(search_terms.electrical_engineering_job_titles)
+# elif settings.CATEGORY is constants.IT_OPERATIONS:
+#     search_terms.generate_urls(search_terms.it_operaions_job_titles)
+# elif settings.CATEGORY is constants.INFORMATION_DESIGN_AND_DOCUMENTATION:
+#     search_terms.generate_urls(search_terms.project_management_job_titles)
+#
+# execute(['scrapy', 'crawl', 'indeedSpider'])
 
 with open("middleware1.csv", "r") as f, open("middleware2.csv", "w") as out_file:
     out_file.writelines(unique_everseen(f))
 
 existing_companies = read_existing_companies("emails_searched_by_domain.csv")
-existing_companies |= read_existing_companies("SF_startups.csv")
 print(len(existing_companies))
 
 with open("middleware2.csv") as f:
